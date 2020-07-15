@@ -35,8 +35,10 @@ class RndStatistics:
         :type n: int, optional
         :raises ValueError: raise illagel numbers when parameters are negative
         """
-        if rndstart < 0 or rndend < 0 or n < 0:
-            raise ValueError("illegal numbers")
+        if n <= 0:
+            raise ValueError("illegal parameters. parameter n should be positive")
+        if not rndstart < rndend:
+            raise ValueError("illegal parameters. parameter rndstart should be less than rndend")
         self._a = [random.randint(rndstart, rndend) for _ in range(n)]
     def __repr__(self):
         fmt = "{0},mean={1},mode={2},devsq={3},stdev={4}"
@@ -60,7 +62,7 @@ class RndStatistics:
 def main():
     n = 10
     for _ in range(n):
-        stat = RndStatistics(rndstart=10, rndend=100, n=10)
+        stat = RndStatistics(rndstart=-10, rndend=10, n=10)
         print(stat)
         stat.log()
 
