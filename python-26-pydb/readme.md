@@ -1,0 +1,1 @@
+This is a simple project that it utilizes python to communicate with sqlite3 database.
