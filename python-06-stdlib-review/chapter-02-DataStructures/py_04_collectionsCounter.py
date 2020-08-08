@@ -21,6 +21,7 @@ def collections_counter_update():
 @addBreaker
 def collections_counter_get_values():
     c = collections.Counter('abcdaab')
+    # ! Counter wont throw KeyError even the key doesnt exist. it returns 0
     for letter in 'abcde':
         print('{} : {}'.format(letter, c[letter]))
 
@@ -69,16 +70,6 @@ def collections_counter_arithmetic():
     print(c1 & c2)
     print('\nUnion (taking maximums):')
     print(c1 | c2)
-
-
-
-
-
-
-
-
-
-
 
 def main():
     # normal usage
