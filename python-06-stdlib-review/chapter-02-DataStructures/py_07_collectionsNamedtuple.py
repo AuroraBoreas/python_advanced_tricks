@@ -39,19 +39,6 @@ def collections_namedtuple_special_attr():
     print('_replace         :', bob._replace(name='Robert'))
     print('Representation   :', bob)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
     # tuple vs namedtuple
     collections_tuple_vs_namedtuple()
