@@ -2,19 +2,19 @@
 table: regular expression Escape codes
 
 +--------+---------------------------------------+
-|code    |meaning                                |
+| code   | meaning                               |
 +========+=======================================+
-|\d      |A digit                                |
+| \d     | A digit                               |
 +--------+---------------------------------------+
-|\D      |A non-digit                            |
+| \D     | A non-digit                           |
 +--------+---------------------------------------+
-|\s      |Whitespace (tab, space, newline, etc.) |
+| \s     | Whitespace (tab, space, newline, etc.)|
 +--------+---------------------------------------+
-|\S      |Non-whitespace                         |
+| \S     | Non-whitespace                        |
 +--------+---------------------------------------+
-|\w      | Alphanumeric                          |
+| \w     | Alphanumeric                          |
 +--------+---------------------------------------+
-|\W      | Non-alphanumeric                      |
+| \W     | Non-alphanumeric                      |
 +--------+---------------------------------------+
 
 """
