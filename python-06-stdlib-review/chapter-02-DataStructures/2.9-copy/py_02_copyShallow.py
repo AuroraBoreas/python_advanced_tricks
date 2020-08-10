@@ -2,20 +2,20 @@
 copy.copy()
 
 -------------------------               a
-|                       |
-| Original container    |
-|-----------------------|
-|        a              |
-|                       |
--------------------------
-
-            ↓↓↓
-
-=========================
-|                       |
-|   new container       |
-|-----------------------|
-|       a               |
+|                       |               |
+| Original container    |               |
+|-----------------------|               |
+|        a              |---------------|
+|                       |               |
+-------------------------               |
+                                        |
+            ↓↓↓                         |
+                                        |
+=========================               |
+|                       |               |
+|   new container       |               |
+|-----------------------|               |
+|       a               |---------------|
 |                       |
 =========================
 
@@ -28,6 +28,29 @@ Return the “identity” of an object. This is an integer which is guaranteed t
 Two objects with **non-overlapping lifetimes** may have the same id() value.
 
 CPython implementation detail: This is the address of the object in memory.
+
+
+copy.deepcopy()
+
+-------------------------               
+|                       |
+| Original container    |
+|-----------------------|
+|        a              |---------------a
+|                       |
+-------------------------
+                         
+            ↓↓↓          
+                         
+=========================
+|                       |
+|   new container       |
+|-----------------------|
+|       a               |---------------a'
+|                       |
+=========================
+
+
 
 """
 
