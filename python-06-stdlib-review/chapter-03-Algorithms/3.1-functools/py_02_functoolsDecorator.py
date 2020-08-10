@@ -109,12 +109,43 @@ def functools_partialmethod_vs_partial():
     except TypeError as err:
         print('Error: {}'.format(err))
 
+@addBreaker
+def functools_wraps():
+    def simple_decorator(f):
+        # wraps(f) is to apply update_wrapper() to the decorated function
+        @functools.wraps(f)
+        def decorated(a='decorated defaults', b=1):
+            print(' decorated:', (a, b))
+            print(' ', end=' ')
+            return f(a, b=b)
+        return decorated
+    # raw function
+    show_details2('myfunc', myfunc)
+    myfunc('unwrapped, default b')
+    myfunc('unwrapped, passing b', 3)
+    print()
+    # wrapped explicitly
+    wrapped_myfunc = simple_decorator(myfunc)
+    show_details2('wrapped_myfunc', wrapped_myfunc)
+    wrapped_myfunc()
+    wrapped_myfunc('args to wrapped', 4)
+    print()
+    # wrapped with decorator syntax
+    @simple_decorator
+    def decorated_myfunc(a, b):
+        myfunc(a, b)
+        return
+    show_details2('decorated_myfunc', decorated_myfunc)
+    decorated_myfunc()
+    decorated_myfunc('args to decorated', 4)
 
 if __name__ == "__main__":
     # functools_partial()
     # using functools.update_wrapper() to do update ..
-    functools_update_wrapper()
+    # functools_update_wrapper()
     # Python is protocol lang so class could be callable too via implementing __call__ dunder method
-    functools_callable()
+    # functools_callable()
     # functools.partialmethod() vs functools.partial()
-    functools_partialmethod_vs_partial()
+    # functools_partialmethod_vs_partial()
+    # decorator
+    functools_wraps()
