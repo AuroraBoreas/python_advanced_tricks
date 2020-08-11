@@ -8,11 +8,11 @@ P163-P176, itertools: iterator functions
 ! How?
 
 itertools
-|-- merging and splitting iterators
-|-- converting inputs
-|-- producing new valeus
-|-- filtering
-|-- grouping data
-|-- combining inputs
+|-- merging and splitting iterators "分合"
+|-- converting inputs               "转"
+|-- producing new valeus            "生"
+|-- filtering                       "滤"
+|-- grouping data                   "群"
+|-- combining inputs                "主"
 
 """

@@ -8,10 +8,10 @@ P143-P161, functools: Tools for manipulating functions
 ! How?
 
 functools
-|-- decorator
-|-- comparison
-|-- caching
-|-- reducing a data set
-|-- generic functions
+|-- decorator               "装"
+|-- comparison              "比"
+|-- caching                 "缓"
+|-- reducing a data set     "减"
+|-- generic functions       "载"
 
 """
