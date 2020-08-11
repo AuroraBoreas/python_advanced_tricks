@@ -28,12 +28,12 @@ def operator_arithmetic():
     print('mod(a, b)        :', operator.mod(a, b))
 
     print('\nBitwise:')
-    print('and_(c, d)       :', operator.and_(c, d))
-    print('or_(c, d)        :', operator.or_(c, d))
-    print('invert(c)        :', operator.invert(c))
-    print('xor(c, d)        :', operator.xor(c, d))
-    print('lshift(c, d)     :', operator.lshift(c, d))
-    print('rshift(d, c)     :', operator.rshift(d, c))
+    print('and_(c, d)       :', operator.and_(c, d))    # c & d
+    print('or_(c, d)        :', operator.or_(c, d))     # c | d
+    print('invert(c)        :', operator.invert(c))     # two's complement. ~c = -c - 1
+    print('xor(c, d)        :', operator.xor(c, d))     # a ^ b
+    print('lshift(c, d)     :', operator.lshift(c, d))  # d << c
+    print('rshift(d, c)     :', operator.rshift(d, c))  # d >> c
 
 if __name__ == "__main__":
     operator_arithmetic()
