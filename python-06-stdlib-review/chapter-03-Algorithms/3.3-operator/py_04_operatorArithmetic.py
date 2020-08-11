@@ -4,6 +4,12 @@ from pkg.breaker import addBreaker
 
 @addBreaker
 def operator_arithmetic():
+    """
+    arithmetic, math
+    +, -, |a|
+    +, -, *, //, /, %, pow
+    &, |, ^, ~, <<, >>
+    """
     a, b, c, d = -1, 5.0, 2, 6
     print('a =', a)
     print('b =', b)
